@@ -78,3 +78,13 @@ errors in your generated files. It also does not automatically format your code,
 
 - Make even easier the way annotation processing is done.
 - Build a framework around this? Jk...unless...
+
+# Getting started
+
+-mvn clean install the project
+
+-javac -cp /path/to/simpleannotation-1.1.jar  -processor com.camacho.simpleannotation.processors.BuilderAnnotationProcessor FakeClassHappyPath.java
+
+-javac -cp /path/to/simpleannotation-1.1.jar  -processor com.camacho.simpleannotation.processors.BuilderAnnotationProcessor FakeClassNoDefaultConstructor.java
+
+-you might have to refresh the project explorer
