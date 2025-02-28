@@ -9,8 +9,6 @@ import com.camacho.simpleannotation.annotations.Builder;
 import com.camacho.simpleannotation.exceptions.BadAnnotationUsageException;
 import com.camacho.simpleannotation.model.BuilderAnnotatedClass;
 
-import com.google.auto.service.AutoService;
-import javax.annotation.processing.Processor;
 import javax.annotation.processing.SupportedAnnotationTypes;
 import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
@@ -23,7 +21,6 @@ import static com.camacho.simpleannotation.utils.ElementUtils.isClass;
 
 @SupportedAnnotationTypes("com.camacho.simpleannotation.annotations.Builder")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
-@AutoService(Processor.class)
 public final class BuilderAnnotationProcessor
         extends AbstractAnnotationProcessor<Builder, BuilderAnnotatedClass> {
     private static final String ANNOTATION_NAME = "@Builder";

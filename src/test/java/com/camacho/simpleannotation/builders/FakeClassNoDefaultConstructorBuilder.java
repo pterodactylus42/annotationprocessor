@@ -1,7 +1,6 @@
 package com.camacho.simpleannotation.builders;
 import java.util.Map;
 import java.util.HashMap;
-import com.camacho.simpleannotation.builders.FakeClassNoDefaultConstructor;
 public class FakeClassNoDefaultConstructorBuilder {
 	private static FakeClassNoDefaultConstructorBuilder instance;
 	private Map<String, Object> container;

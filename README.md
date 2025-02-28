@@ -81,10 +81,17 @@ errors in your generated files. It also does not automatically format your code,
 
 # Getting started
 
--mvn clean install the project
+- mvn clean install the project
 
--javac -cp /path/to/simpleannotation-1.1.jar  -processor com.camacho.simpleannotation.processors.BuilderAnnotationProcessor FakeClassHappyPath.java
+- see what the processor does by using it on the command line:
 
--javac -cp /path/to/simpleannotation-1.1.jar  -processor com.camacho.simpleannotation.processors.BuilderAnnotationProcessor FakeClassNoDefaultConstructor.java
+- javac -cp /path/to/simpleannotation-1.1.jar  -processor com.camacho.simpleannotation.processors.BuilderAnnotationProcessor FakeClassHappyPath.java
 
--you might have to refresh the project explorer
+- javac -cp /path/to/simpleannotation-1.1.jar  -processor com.camacho.simpleannotation.processors.BuilderAnnotationProcessor FakeClassNoDefaultConstructor.java
+
+- you might have to refresh the project explorer in order to see the resulting classes.
+
+- alternatively, add the generated .jar-file of the processor to your project. 
+Right click on the project, select Properties, go to
+Java Compiler - Annotation Processing - Factory Path
+and add your .jar ...

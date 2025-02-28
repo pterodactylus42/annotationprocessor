@@ -1,7 +1,6 @@
 package com.camacho.simpleannotation.utils;
 
 import com.camacho.simpleannotation.exceptions.ClassGenerationException;
-import com.google.common.collect.Lists;
 
 import javax.lang.model.element.*;
 import java.util.*;
@@ -52,7 +51,7 @@ public final class ElementUtils {
                 .map(es -> es.stream()
                         .filter(e -> ElementKind.CONSTRUCTOR.equals(e.getKind()))
                         .collect(Collectors.toList()))
-                .orElse(Lists.newArrayList());
+                .orElse(new ArrayList<>());
     }
 
     public static <E extends Element> boolean isConstructor(E element) {
@@ -96,7 +95,7 @@ public final class ElementUtils {
                 .map(es -> es.stream()
                         .filter(e -> ElementKind.METHOD.equals(e.getKind()))
                         .collect(Collectors.toList()))
-                .orElse(Lists.newArrayList());
+                .orElse(new ArrayList<>());
     }
 
     public static <E extends Element> boolean isAttribute(E element) {
@@ -170,7 +169,7 @@ public final class ElementUtils {
                 .map(es -> es.stream()
                         .filter(e -> ElementKind.CLASS.equals(e.getKind()))
                         .collect(Collectors.toList()))
-                .orElse(Lists.newArrayList());
+                .orElse(new ArrayList<>());
     }
 
     /**
@@ -203,7 +202,7 @@ public final class ElementUtils {
                 .map(es -> es.stream()
                         .filter(e -> ElementKind.ENUM.equals(e.getKind()))
                         .collect(Collectors.toList()))
-                .orElse(Lists.newArrayList());
+                .orElse(new ArrayList<>());
     }
 
     /**

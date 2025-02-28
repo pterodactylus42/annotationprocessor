@@ -1,7 +1,6 @@
 package com.camacho.simpleannotation.builders;
 import java.util.Map;
 import java.util.HashMap;
-import com.camacho.simpleannotation.builders.FakeClassHappyPath;
 public class FakeClassHappyPathBuilder {
 	private static FakeClassHappyPathBuilder instance;
 	private Map<String, Object> container;
